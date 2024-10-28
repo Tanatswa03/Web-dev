@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../CSS/style.css">
+        <script src="../javascript/user.js"></script>
+    </head>
+    <body>
+        
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Profile Settings</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <!-- Header with role information -->
+        
+            <div class="container">
+                <div class="header">
+                    <h1>User Profile</h1>
+                    <span class="role-badge" id="userRole">User Role: Admin</span>
+                </div>
+                <h1 class="heading">Profile Settings</h1>
+                
+                <div id="error-container" class="error-message"></div>
+                <div id="success-container" class="error-message" style="color: #4CAF50;"></div>
+                
+                <form id="profile-form" class="form">
+                    <div class="input-field">
+                        <input id="username" type="text" required>
+                        <label for="username">Username</label>
+                    </div>
+                    
+                    <div class="input-field">
+                        <input id="email" type="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    
+                    <div class="btn-container">
+                        <button type="submit" class="btn">
+                            Update Profile
+                            <span class="loading" style="display: none;"></span>
+                        </button>
+                    </div>
+                </form>
+                
+                <h2 class="heading" style="margin-top: 2rem; font-size: 1.25rem;">Change Password</h2>
+                <form id="password-form" class="form">
+                    <div class="input-field">
+                        <input id="current-password" type="password" required>
+                        <label for="current-password">Current Password</label>
+                    </div>
+                    
+                    <div class="input-field">
+                        <input id="new-password" type="password" required>
+                        <label for="new-password">New Password</label>
+                    </div>
+                    
+                    <div class="input-field">
+                        <input id="confirm-password" type="password" required>
+                        <label for="confirm-password">Confirm New Password</label>
+                    </div>
+                    
+                    <div class="btn-container">
+                        <button type="submit" class="btn">
+                            Update Password
+                            <span class="loading" style="display: none;"></span>
+                        </button>
+                    </div>
+                    <!-- Admin Section (only visible to admin users) -->
+                 <div class="admin-section" id="adminSection" style="display: none;">
+                     <h2>Admin Dashboard</h2>
+                    <p>This section is only visible to administrators.</p>
+                        <button type="submit" class="btn" style="background-color: #4CAF50;" onclick="showAdminDashboard()">Access Admin Dashboard</button>
+                </div>
+                </form>
+            </div>
+        </body>
+        </html>
+ </body>
+
+</html>
+
